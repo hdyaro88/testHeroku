@@ -14,7 +14,8 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
   });
 }
-app.get("/api" , (req , res) => {
+app.get("/welcome" , (req , res) => {
+    res.header("Content-Type", "application/json");
     console.log("hello")
     res.send({status : "hello , welcome"});
 })
